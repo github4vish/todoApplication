@@ -1,0 +1,57 @@
+###
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 11,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2023-3-12"
+}
+
+
+###
+PUT http://localhost:3000/todos/11/
+Content-Type: application/json
+
+{  
+  "status": "DONE"
+  
+}
+
+
+###
+GET http://localhost:3000/todos/?status=TO%20DO
+
+###
+GET http://localhost:3000/todos/?priority=HIGH
+
+###
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+###
+GET http://localhost:3000/todos/?search_q=Buy
+
+###
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+
+###
+GET http://localhost:3000/todos/?category=HOME
+
+
+###
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+
+
+###
+GET http://localhost:3000/todos/1/
+
+
+###
+GET http://localhost:3000/agenda/?date=2021-1-12
+
+###
+DELETE  http://localhost:3000/todos/10/
